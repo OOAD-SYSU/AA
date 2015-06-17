@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center_horizontal"
+        android:text="消费总额" />
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="23dp"
+        android:text="消费主题" />
+
+    <TextView
+        android:id="@+id/qianzhaiamount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="25dp"
+        android:text="消费人员" />
+
+    <ListView
+        android:id="@+id/qianzhailist"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignLeft="@+id/qianzhaiamount"
+        android:layout_below="@+id/qianzhaiamount" >
+    </ListView>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="40dp"
+        android:text="确定消费" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/addP"
+        android:layout_toRightOf="@+id/addP"
+        android:text="添加" />
+
+    <EditText
+        android:id="@+id/addP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/qianzhailist"
+        android:layout_below="@+id/qianzhailist"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="请输入添加的消费人员" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/amount"
+        android:layout_alignBottom="@+id/amount"
+        android:layout_alignRight="@+id/add"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/name"
+        android:layout_alignBottom="@+id/name"
+        android:layout_alignLeft="@+id/editText1"
+        android:ems="10" />
+
+</RelativeLayout>
